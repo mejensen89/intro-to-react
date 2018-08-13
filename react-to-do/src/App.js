@@ -36,9 +36,9 @@ handleChange(e) {
 
  
    
-	render() {
+render() {
     
-		return (
+	return (
       
 			<div className="App">
         		<ul>
@@ -51,11 +51,7 @@ handleChange(e) {
            			<input type="submit" />
          		</form>			 
 			</div>
-    );
-  
-		}
+);
+}}
 
-
-
-
-	export default App;
+export default App;
