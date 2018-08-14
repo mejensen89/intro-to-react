@@ -7,7 +7,7 @@ class App extends Component {
      super(props);
      this.state = {
      	todos: [
-     		{description: 'Walk the cat', isCompleted: true},
+     		{description: 'Walk the cat', isCompleted: true,},
      		{description: 'Throw the dishes away',  isCompleted: false},
      		{description: 'Buy new dishes', isCompleted: false}
      	],
@@ -15,15 +15,21 @@ class App extends Component {
      };     
    }
 
-handleChange(e) {
-     this.setState({ newTodoDescription: e.target.value })
+   deleteToDo(d) {
+   	 this.setState({todos: this.state.todos.filter(function(item) { 
+        return item !== d.target.value 
+    })});
    }
 
- handleSubmit(e) {
-     e.preventDefault();
-     if (!this.state.newTodoDescription) { return }
-      const newTodo = { description: this.state.newTodoDescription, isCompleted: false };
-     this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });
+	handleChange(e) {
+     	this.setState({ newTodoDescription: e.target.value })
+   }
+
+	 handleSubmit(e) {
+    	 e.preventDefault();
+    	 if (!this.state.newTodoDescription) { return }
+      	const newTodo = { description: this.state.newTodoDescription, isCompleted: false };
+     	this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });
    }
 
 
