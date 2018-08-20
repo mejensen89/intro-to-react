@@ -36,9 +36,9 @@ handleChange(e) {
 
  
    
-render() {
+	render() {
     
-	return (
+		return (
       
 			<div className="App">
         		<ul>
@@ -51,7 +51,12 @@ render() {
            			<input type="submit" />
          		</form>			 
 			</div>
-);
-}}
+    );
+  
+		}
+	}
 
-export default App;
+
+
+
+	export default App;
