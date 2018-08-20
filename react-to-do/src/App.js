@@ -57,10 +57,12 @@ render() {
         				<ToDo key={ index } todoIndex = {index} description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } deleteToDo = {this.deleteToDo}/>
         			)}
 			    </ul>
+			    <button> Delete </button>
 			    <form onSubmit={ (e) => this.handleSubmit(e) }>
           			 <input type="text" value={ this.state.newTodoDescription } onChange={ (e) => this.handleChange(e) } />
            			<input type="submit" />
-         		</form>			 
+         		</form>	
+
 			</div>
 );
 }}
